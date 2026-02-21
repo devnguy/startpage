@@ -27,11 +27,18 @@ const default_configuration = {
   ],
   search: {
     engines: {
-      p: ["https://www.perplexity.ai/search/?q=", "PerplexityAI"],
-      d: ["https://duckduckgo.com/?q=", "DuckDuckGo"],
+      // p: ["https://www.perplexity.ai/search/?q=", "PerplexityAI"],
+      // d: ["https://duckduckgo.com/?q=", "DuckDuckGo"],
       g: ["https://google.com/search?q=", "Google"],
+      d: ["https://duckduckgo.com/?q="],
+      aw: ["https://wiki.archlinux.org/?search="],
+      apkg: ["https://archlinux.org/packages/?sort=&q="],
+      aur: ["https://aur.archlinux.org/packages?K="],
+      gh: ["https://github.com/search?o=desc&s=stars&q="],
+      yt: ["https://www.youtube.com/results?search_query="],
+      w: ["https://wikipedia.org/w/index.php?search="],
     },
-    default: "d",
+    default: "g",
   },
   keybindings: {
     s: "search-bar",

@@ -1,4 +1,3 @@
-
 // Component for rendering navigation links within tabs
 class Links extends Component {
   /**
@@ -39,16 +38,16 @@ class Links extends Component {
             <h1>${name}</h1>
               <div class="links-wrapper">
               ${links
-              .map(
-                (link) => `
+                .map(
+                  (link) => `
                   <div class="link-info">
                     <a href="${link.url}" target="_blank">
                       ${Links.getIcon(link)}
                       ${link.name ? `<p class="link-name">${link.name}</p>` : ""}
                     </a>
                 </div>`,
-              )
-              .join("")}
+                )
+                .join("")}
             </div>
           </li>`;
         })
@@ -117,11 +116,11 @@ class Tabs extends Component {
    */
   imports() {
     return [
-      this.getIconResource('material'),
+      this.getIconResource("material"),
       this.resources.icons.tabler,
-      this.getFontResource('roboto'),
-      this.getFontResource('raleway'),
-      this.getLibraryResource('awoo'),
+      this.getFontResource("roboto"),
+      this.getFontResource("raleway"),
+      this.getLibraryResource("awoo"),
     ];
   }
 
@@ -135,8 +134,7 @@ class Tabs extends Component {
           bottom: -70px;
           height: 32px;
           background: ${CONFIG.palette.base};
-          border-radius: 4px;
-          box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+          border-radius: 0px;
       }
 
       #panels, #panels ul,
@@ -149,7 +147,7 @@ class Tabs extends Component {
       }
 
       #panels {
-          border-radius: 5px 0 0 5px;
+          border-radius: 0px 0 0 0px;
           width: 90%;
           max-width: 1200px;
           height: 450px;
@@ -158,7 +156,6 @@ class Tabs extends Component {
           top: 0;
           bottom: 0;
           margin: auto;
-          box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
           background: ${CONFIG.palette.base};
       }
 
@@ -167,7 +164,7 @@ class Tabs extends Component {
           height: 100%;
           overflow: hidden;
           position: relative;
-          border-radius: 10px 0 0 10px;
+          border-radius: 0px 0 0 0px;
       }
 
       .categories ul {
@@ -177,14 +174,6 @@ class Tabs extends Component {
           height: 100%;
           right: 100%;
           background: ${CONFIG.palette.base} url("../img/bg-1.gif") repeat left;
-          transition: all .6s;
-          # animation: scroll 25s ease-in-out infinite;
-      }
-
-      @keyframes scroll {
-          50% {
-              background-position-x: -240px;
-          }
       }
 
       .categories ul:nth-child(1) {
@@ -238,7 +227,7 @@ class Tabs extends Component {
           padding: .4em .7em;
           background: ${CONFIG.palette.mantle};
           box-shadow: 0 4px ${CONFIG.palette.mantle}, 0 5px 10px rgb(0 0 0 / 20%);
-          border-radius: 2px;
+          border-radius: 0;
           margin-bottom: .7em;
       }
 
@@ -264,7 +253,7 @@ class Tabs extends Component {
           height: 250px;
           padding: 1em;
           margin: auto;
-          border-radius: 5px;
+          border-radius: 0;
           box-shadow: inset 0 0 0 2px var(--flavour);
           left: calc(15% - 42.5px);
           bottom: 0;
@@ -312,20 +301,8 @@ class Tabs extends Component {
       }
 
       .ti {
-          animation: fadeInAnimation ease .5s;
-          animation-iteration-count: 1;
-          animation-fill-mode: forwards;
           height: 27px;
           width: 27px;
-      }
-
-      @keyframes fadeInAnimation {
-          0% {
-              opacity: 0;
-          }
-          100% {
-              opacity: 1;
-          }
       }
     `;
   }
